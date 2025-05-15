@@ -1,0 +1,90 @@
+=============================
+NodeTasks - API de Tarefas
+=============================
+
+Descrição:
+Projeto simples de uma API para gerenciar tarefas, criada com Node.js e Express.
+
+Funcionalidades:
+- Listar tarefas
+- Criar nova tarefa
+- Marcar tarefa como concluída
+- Deletar tarefa
+- Exibir lista de séries na raiz (/)
+
+---
+
+1. Instalar Node.js
+-------------------
+Se ainda não tem Node.js instalado, baixe em: https://nodejs.org/
+Depois, confirme no terminal:
+    node -v
+    npm -v
+
+---
+
+2. Preparar o projeto
+---------------------
+- Abra o terminal na pasta do projeto (onde está o arquivo index.js).
+- Instale as dependências:
+    npm install
+
+---
+
+3. Rodar o servidor
+-------------------
+No terminal, execute:
+    node index.js
+
+Aguarde a mensagem:
+    Servidor rodando em http://localhost:3000
+
+---
+
+4. Testar a API
+---------------
+- Abra no navegador:
+    http://localhost:3000/
+    Retorna uma lista de séries em JSON.
+
+- Para listar tarefas (inicialmente vazio):
+    GET http://localhost:3000/tasks
+
+- Para criar uma tarefa (use Postman, Insomnia ou similar):
+    POST http://localhost:3000/tasks
+    Body (JSON):
+    {
+        "title": "Minha tarefa"
+    }
+
+- Para marcar tarefa como concluída:
+    PATCH http://localhost:3000/tasks/:id
+    (substitua :id pelo id da tarefa)
+
+- Para deletar tarefa:
+    DELETE http://localhost:3000/tasks/:id
+    (substitua :id pelo id da tarefa)
+
+---
+
+5. Parar o servidor
+-------------------
+No terminal onde está rodando, pressione:
+    Ctrl + C
+
+---
+
+6. Dicas
+--------
+- Use ferramentas como Postman ou Thunder Client (VS Code) para facilitar testes com POST, PATCH, DELETE.
+- O servidor não salva tarefas em arquivo ou banco, os dados somem ao parar.
+
+---
+
+7. Contato
+----------
+Se precisar de ajuda, só chamar!
+
+------------------------------
+Fim do arquivo README.txt
+------------------------------
